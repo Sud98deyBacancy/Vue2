@@ -1,0 +1,49 @@
+<html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+new Vue({
+  el: '#app',
+  data: {
+   products:['Fruits','Vegetables','Edibles'],
+   persons:[
+   {name:'Sudarshan',age:23},
+   {name:'Ben',age:20},
+   {name:'John',age:33}
+   ],
+   show:false
+  }
+})
+</script>
+< body>
+<p> Load all contents in JS Fiddle. </p>
+<div id="app">
+  <p v-if="show"> You can See Me</p>
+  <p v-else> Do you See Me?</p>
+  <template v-if="show">
+    Compounds
+  <h1 v-if="!show"> C0<sub>2</sub>  </h1>
+  <h2 v-else> H<sub>2</sub>O </h2>
+  </template>
+  <button @click="show=!show">Show</button>
+  <div>
+    Rendering Products 
+  <ul>
+  <li v-for="product in products">{{ product }}</li>
+  </ul>
+ Rendering Persons
+ <ol>
+ <li v-for="p in persons" >
+   <p>
+   {{ p.name }} | {{ p.age }}
+   </p>
+ </li>
+ </ol>
+ </div>
+ Looping Using Template
+ <Template v-for="(P,I) in products">
+   <p> {{ P }}</p> <p> {{ I+1 }}</p>
+ </Template>
+ </div>
+
+</body>
+</html>
