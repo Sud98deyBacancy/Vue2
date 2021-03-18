@@ -1,4 +1,5 @@
 <template>
+  <base-card>
   <form @submit.prevent="AddEmployee">  
     <h2> Professional DataForm </h2>
       <div class="form-control">
@@ -22,9 +23,9 @@
        </select>
       </div>
       <div>
-        <button>Submit</button>
+        <base-button>Submit</base-button>
       </div>
-  </form>
+  </form></base-card>
 </template>
 <script>
 export default {

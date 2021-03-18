@@ -1,6 +1,6 @@
 <template>
   
-    
+   <base-card> 
    <form @submit.prevent="addContact">      
      <h2> Personal Data Form</h2>
       <div class="form-control" :class="{invalid : namevalid === 'invalid' }">
@@ -34,10 +34,10 @@
        </select>
       </div>
       <div>
-        <button @click="next">Submit</button>
+        <base-button @click="next">Submit</base-button>
       </div>
    </form>
-    
+   </base-card>  
   
 </template>
 <script>

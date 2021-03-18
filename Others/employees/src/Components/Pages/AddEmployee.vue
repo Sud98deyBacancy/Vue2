@@ -11,7 +11,7 @@
         <h3> Professional Details </h3>
           <p> Designation: {{ desg }}</p> <p>Description: {{desc}}</p> 
           <p> Net Salary: {{ sal }}</p> <p>Department: {{dept}}</p>
-     </section>    
+     </section>     
 </li>    
 </template>
 <script>

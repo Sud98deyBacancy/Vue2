@@ -1,10 +1,12 @@
 <template>
-  <button>
+  <button :class="mode">
     <slot></slot>
   </button>
 </template>
 
-<script></script>
+<script>
+export default{props:['mode']}
+</script>
 
 <style>
 button {
@@ -18,8 +20,8 @@ button {
 
 button:hover,
 button:active {
-  background-color: #270041;
-  border-color: #270041;
+  background-color: #480041;
+  border-color: #274041;
 }
 
 .flat {
