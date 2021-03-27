@@ -6,10 +6,11 @@
        <button @click="Show=!Show" class="btn btn-primary">{{Show?'Hide':'Show'}} Users</button>
       </section>
 <br>
+
    <div class="container" v-if="Show">
            <app-header title="User List"></app-header>
       <hr>
-        <app-body content="Users are not subscribed here" :names=names></app-body>
+        <app-body content="Add Users Here" :names=names></app-body>
         <hr>
         <div class="row">
         <app-footer title="Users are managed here"></app-footer>
