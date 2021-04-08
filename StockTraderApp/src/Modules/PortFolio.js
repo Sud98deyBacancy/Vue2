@@ -1,15 +1,15 @@
-const state = {funds:100000,stocks:[] };
+const state = {funds:100000,Pstocks:[] };
 const mutations = {
     'BUY_STOCK'(state,{Id,Qty,Price}) {
-        const record = state.stocks.find(el => el.id == Id);
+        const record = state.Pstocks.find(el => el.id == Id);
         if(record){ record.quantity += Qty; }
-        else { state.stocks.push({id:Id,quantity:Qty}); }
+        else { state.Pstocks.push({id:Id,quantity:Qty}); }
         state.funds -= Price * Qty;
     },
     'SELL_STOCK'(state,{Id,Qty,Price}){
-        const record = state.stocks.find(el => el.id == Id);
+        const record = state.Pstocks.find(el => el.id == Id);
         if(record.quantity > quantity) { record.quantity -= quantity;}
-        else { state.stocks.splice(state.stocks.indexOf(record),1); }
+        else { state.Pstocks.splice(state.Pstocks.indexOf(record),1); }
         state.funds += Price * Qty;
     }
 };
@@ -18,10 +18,10 @@ const actions = {
 }; 
 const getters = {
     stockPortfolio(state,getters) {
-        return state.stocks.map(stock =>{
-            const record = getters.stocks.find(el => el.id == stock.id);
+        return state.Pstocks.map(stock =>{
+            const record = getters.stocks.find(el => el.id === stock.id);
            return { 
-               id:stock.id,quantity:stock.quantity,name:record.name,price:record.price
+            id:stock.id,quantity:stock.quantity,name:record.name,price:record.price
            }
         });
     },

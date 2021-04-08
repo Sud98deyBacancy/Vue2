@@ -5,11 +5,11 @@ const mutations={
     'RND_STOCKS'(state) { }
 };
 const actions={
-   buyStock:({commit},order)=>{ commit(); },
+   buyStock:({commit},order)=>{ commit('BUY_STOCK',order); },
    initStocks:({ commit})=>{ commit('SET_STOCKS',stocks); },
    randomizeStocks:({commit})=>{ commit('RND_STOCKS'); }
 };
 const getters={
 stocks: state => { return state.stocks;}
 };
-export default { state,mutations,actions,ge};
+export default { state,mutations,actions,getters};
